@@ -1,0 +1,14 @@
+// components/_logo.scss
+
+.top-nav__logo {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--primary-color);
+  border-radius: 50%;
+  img {
+    height: 50px;
+    width: 50px;
+  }
+}

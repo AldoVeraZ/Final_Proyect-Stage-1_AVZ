@@ -1,0 +1,9 @@
+.top-header {
+  box-shadow: 0 4px 5px var(--navbar-shallow-color);
+  position: fixed;
+  background-color: var(--theme-color);
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}

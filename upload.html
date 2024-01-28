@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./sass/main.css" />
+  </head>
+  <body>
+    <header class="top-header">
+      <nav class="top-nav">
+        <a href="#" class="top-nav__logo">
+          <img src="./img/jason.svg" alt="icon-logo" />
+          <div>
+            TOYS COLLECTION <br />
+            FROM HELL
+          </div>
+        </a>
+        <button class="open-menu" aria-label="Abrir menú">
+          <img src="./img/hamburger-icon.svg" alt="abrir menú" />
+        </button>
+        <ul class="top-nav__menu">
+          <button class="close-menu" aria-label="Cerrar menú">
+            <img src="./img/close-icon.svg" alt="cerrar menú" />
+          </button>
+          <li><a href="./index.html" class="selected">Home</a></li>
+          <li><a href="./about.html">Sobre Nosotros</a></li>
+          <li><a href="./upload.html">Alta</a></li>
+          <li><a href="./contact.html">Contactanos</a></li>
+          <form class="search-form">
+            <input type="search" placeholder="Buscar..." />
+            <button type="submit">Buscar</button>
+          </form>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="horizontal-padding vertical-padding">
+      <section class="upload" id="upload">
+        <h2 class="upload-title">Dar de Alta un producto</h2>
+
+        <form class="upload-form" onsubmit="onSubmitProduct(event)">
+          <div class="upload-form-group">
+            <label for="name" class="label-required">Nombre</label>
+            <input
+              required
+              type="text"
+              class="form-control"
+              name="name"
+              id="name"
+            />
+            <p id="nameError" class="input-msg-error"></p>
+          </div>
+          <div class="upload-form-group">
+            <label for="price" class="label-required">Precio</label>
+            <input
+              required
+              type="number"
+              class="form-control"
+              name="price"
+              id="price"
+            />
+            <p id="priceError" class="input-msg-error"></p>
+          </div>
+          <div class="upload-form-group">
+            <label for="stock" class="label-required">Stock</label>
+            <input
+              required
+              type="number"
+              class="form-control"
+              name="stock"
+              id="stock"
+              min="0"
+            />
+            <p id="stockError" class="input-msg-error"></p>
+          </div>
+          <div class="upload-form-group">
+            <label for="brand">Marca</label>
+            <input
+              type="text"
+              class="form-control"
+              name="brand"
+              id="brand"
+              maxlength="20"
+            />
+            <p id="brandError" class="input-msg-error"></p>
+          </div>
+          <div class="upload-form-group">
+            <label for="category" class="label-required">Categoría</label>
+            <input
+              required
+              type="text"
+              class="form-control"
+              name="category"
+              id="category"
+            />
+            <p id="categoryError" class="input-msg-error"></p>
+          </div>
+
+          <div class="upload-form-group">
+            <label for="shortDescription" class="label-required"
+              >Descripción corta</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              name="shortDescription"
+              id="shortDescription"
+              required
+              maxlength="120"
+            />
+            <p id="shortDescriptionError" class="input-msg-error"></p>
+          </div>
+          <div class="upload-form-group">
+            <label for="longDescription">Descripción larga</label>
+            <textarea
+              name="longDescription"
+              id="longDescription"
+              rows="6"
+              minlength="60"
+              maxlength="400"
+              class="form-control"
+            ></textarea>
+          </div>
+          <div class="upload-form-radio">
+            <input
+              type="checkbox"
+              class="form-control"
+              name="freeDeliver"
+              id="freeDeliver"
+            />
+            <label for="freeDeliver" class="short">Envio sin cargo:</label>
+          </div>
+
+          <div class="upload-form-group">
+            <label for="ageFrom">Edad desde</label>
+            <input
+              min="0"
+              type="number"
+              class="form-control"
+              name="ageFrom"
+              id="ageFrom"
+            />
+            <p id="ageFromError" class="input-msg-error"></p>
+          </div>
+
+          <div class="upload-form-group">
+            <label for="ageTo">Edad hasta</label>
+            <input
+              min="1"
+              type="number"
+              class="form-control"
+              name="ageTo"
+              id="ageTo"
+            />
+            <p id="ageToError" class="input-msg-error"></p>
+          </div>
+
+          <div class="upload-form-group">
+            <label for="photo" class="label-required">Foto</label>
+            <input
+              type="file"
+              class="form-control"
+              name="photo"
+              id="photo"
+              required
+            />
+            <p id="photoError" class="input-msg-error"></p>
+          </div>
+
+          <button type="submit" class="upload-form-submit">
+            Guardadr Producto
+          </button>
+        </form>
+      </section>
+    </div>
+
+    <footer>
+      <div>
+        <h2>Información</h2>
+        <a href="./about.html">Nosotros</a>
+        <p>Terminos y condiciones</p>
+      </div>
+      <div>
+        <h2>©Toys Collection 2024-♾</h2>
+        <p>Desarrollado por LoneWolfDevv</p>
+      </div>
+      <div>
+        <h2>Servicio al Cliente</h2>
+        <p>aestebanveraz@gmail.com</p>
+
+        <p class="phone">
+          <i class="material-icons">phone_android</i><span>+56950343398</span>
+        </p>
+      </div>
+    </footer>
+    <!-- <script defer src="./js/validations.js"></script> -->
+    <script defer src="./js/alta.js"></script>
+    <script defer src="./js/main.js"></script>
+  </body>
+</html>

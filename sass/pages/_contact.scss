@@ -1,0 +1,171 @@
+.contact {
+  background-color: #b0b0b0;
+  color: var(--text-color);
+  font-size: 18px;
+  border-radius: 14px;
+  padding: 25px;
+
+  .label-required::after {
+    content: "(*)";
+    color: rgb(182, 17, 17);
+    margin-left: 0.5rem;
+  }
+
+  .form-control[aria-invalid="true"] {
+    outline: 2px solid rgb(182, 17, 17);
+  }
+
+  .input-msg-error {
+    display: none;
+    color: rgb(182, 17, 17);
+  }
+
+  display: grid;
+  gap: 25px;
+
+  p,
+  h2,
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  &-title {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &-details,
+  &-form {
+    display: grid;
+    gap: 20px;
+
+    &-group {
+      display: grid;
+      gap: 3px;
+    }
+  }
+
+  &-label {
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  &-form {
+    input,
+    textarea {
+      border-radius: 7px;
+      border: none;
+      height: 30px;
+      padding: 5px 10px;
+    }
+  }
+  &-form {
+    textarea {
+      height: auto;
+      resize: vertical;
+    }
+
+    &-submit {
+      width: 100%;
+      height: 50px;
+
+      background-color: var(--text-color);
+      border-radius: 7px;
+      color: var(--text-color-inverse);
+      cursor: pointer;
+      border: 1px solid var(--theme-color);
+
+      &:hover {
+        box-shadow: 0 0 14px var(--secondary-color);
+      }
+    }
+  }
+
+  .social {
+    &-list {
+      list-style: none;
+
+      display: flex;
+      gap: 25px;
+      justify-content: center;
+
+      img {
+        height: 25px;
+
+        &:hover {
+          filter: drop-shadow(0 0 5px var(--secondary-color));
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 950px) {
+  .contact {
+    font-size: 20px;
+    padding: 70px;
+    max-width: 980px;
+    margin: 0 auto;
+
+    .label-required::after {
+      content: "(*)";
+      color: rgb(182, 17, 17);
+      margin-left: 0.5rem;
+    }
+
+    .form-control[aria-invalid="true"] {
+      outline: 2px solid rgb(182, 17, 17);
+    }
+
+    .input-msg-error {
+      display: none;
+      color: rgb(39, 182, 17);
+    }
+
+    box-sizing: border-box;
+
+    &-title {
+      font-size: 35px;
+      text-align: left;
+    }
+
+    .social {
+      &-list {
+        justify-content: flex-start;
+
+        img {
+          height: 35px;
+        }
+      }
+    }
+
+    &-title {
+      grid-area: title;
+    }
+
+    &-details {
+      grid-area: details;
+    }
+
+    &-form {
+      grid-area: form;
+    }
+
+    .social {
+      grid-area: social;
+    }
+
+    display: grid;
+    grid:
+      "title form" auto
+      "details form" 1fr
+      "social form" auto /
+      1fr 1fr;
+    align-items: start;
+  }
+}
+/* Color Sangre #8A0303 */
+/* Color de Robocop #b0b0b0 */

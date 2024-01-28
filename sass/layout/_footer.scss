@@ -1,0 +1,30 @@
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(225px, 1fr));
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+
+  div a {
+    text-decoration: none;
+    list-style: none;
+    color: #fff;
+  }
+
+  .phone {
+    display: flex;
+    justify-content: center;
+  }
+
+  div {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    grid-template-columns: 1fr;
+  }
+}

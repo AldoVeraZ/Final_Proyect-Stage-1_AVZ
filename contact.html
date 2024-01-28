@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./sass/main.css" />
+  </head>
+  <body>
+    <header class="top-header">
+      <nav class="top-nav">
+        <a href="#" class="top-nav__logo">
+          <img src="./img/jason.svg" alt="icon-logo" />
+          <div>
+            TOYS COLLECTION <br />
+            FROM HELL
+          </div>
+        </a>
+        <button class="open-menu" aria-label="Abrir menú">
+          <img src="./img/hamburger-icon.svg" alt="abrir menú" />
+        </button>
+        <ul class="top-nav__menu">
+          <button class="close-menu" aria-label="Cerrar menú">
+            <img src="./img/close-icon.svg" alt="cerrar menú" />
+          </button>
+          <li><a href="./index.html" class="selected">Home</a></li>
+          <li><a href="./about.html">Sobre Nosotros</a></li>
+          <li><a href="./upload.html">Alta</a></li>
+          <li><a href="./contact.html">Contactanos</a></li>
+          <form class="search-form">
+            <input type="search" placeholder="Buscar..." />
+            <button type="submit">Buscar</button>
+          </form>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="horizontal-padding vertical-padding">
+      <section class="contact" id="contact">
+        <h2 class="contact-title">Contacto</h2>
+        <div class="contact-details">
+          <div class="contact-details-group">
+            <p class="contact-label">Dirección:</p>
+            <p class="contact-text">Chile, Valdívia</p>
+          </div>
+          <div class="contact-details-group">
+            <p class="contact-label">Email:</p>
+            <p class="contact-text">aestebanveraz@gmail.com</p>
+          </div>
+          <div class="contact-details-group">
+            <p class="contact-text">
+              Deje su mensaje y será respondido a la brevedad
+            </p>
+          </div>
+        </div>
+        <form class="contact-form" onsubmit="onSubmitContact(event)">
+          <div class="contact-form-group">
+            <label for="name" class="label-required">Nombre</label>
+            <input
+              required
+              type="text"
+              class="form-control"
+              name="name"
+              id="name"
+            />
+            <p id="nameError" class="input-msg-error"></p>
+          </div>
+          <div class="contact-form-group">
+            <label for="email" class="label-required">Email</label>
+            <input
+              required
+              type="email"
+              class="form-control"
+              name="email"
+              id="email"
+            />
+            <p id="emailError" class="input-msg-error"></p>
+          </div>
+          <div class="contact-form-group">
+            <label for="message">Mensaje</label>
+            <textarea
+              name="message"
+              id="message"
+              rows="6"
+              maxlength="400"
+              class="form-control"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="contact-form-submit">Enviar</button>
+        </form>
+        <nav class="social">
+          <ul class="social-list">
+            <li>
+              <a href="https://twitter.com/" target="_blank">
+                <img src="./img/twitter.svg" alt="twitter" />
+              </a>
+            </li>
+            <li class="social-items">
+              <a href="https://www.youtube.com/" target="_blank">
+                <img src="./img/youtube.svg" alt="youtube" />
+              </a>
+            </li>
+            <li class="social-items">
+              <a href="https://github.com/AldoVeraZ" target="_blank">
+                <img src="./img/github.svg" alt="github" />
+              </a>
+            </li>
+            <li class="social-items">
+              <a href="https://www.linkedin.com/" target="_blank">
+                <img src="./img/linkedin.svg" alt="linkedin" />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </div>
+
+    <footer>
+      <div>
+        <h2>Información</h2>
+        <a href="./about.html">Nosotros</a>
+        <p>Terminos y condiciones</p>
+      </div>
+      <div>
+        <h2>©Toys Collection 2024-♾</h2>
+        <p>Desarrollado por LoneWolfDevv</p>
+      </div>
+      <div>
+        <h2>Servicio al Cliente</h2>
+        <p>aestebanveraz@gmail.com</p>
+
+        <p class="phone">
+          <i class="material-icons">phone_android</i><span>+56950343398</span>
+        </p>
+      </div>
+    </footer>
+    <script defer src="./js/validations.js"></script>
+    <script defer src="./js/contact.js"></script>
+    <script defer src="./js/main.js"></script>
+  </body>
+</html>
